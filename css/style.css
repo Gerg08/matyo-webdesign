@@ -1297,3 +1297,37 @@ html{
     font-style:italic;
     min-height:42px;
 }
+.btn-outline{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    padding:14px 28px;
+
+    border:2px solid #2563EB;
+    border-radius:999px;
+
+    background:transparent;
+    color:#ffffff;
+
+    font-weight:600;
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+.btn-outline:hover{
+    background:#2563EB;
+    transform:translateY(-2px);
+}
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:nowrap;
+}
+
+.hero-buttons .btn{
+    padding:12px 20px;
+    font-size:15px;
+}
