@@ -24,12 +24,33 @@ function revealElements() {
 window.addEventListener("scroll", revealElements);
 window.addEventListener("load", revealElements);
 
-const form = document.querySelector("form");
+
+const form = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
-if (form && formMessage) {
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        formMessage.textContent = "Köszönöm! Hamarosan válaszolok.";
+if(form){
+    form.addEventListener("submit", async function(e){
+        e.preventDefault();
+
+        formMessage.textContent = "Küldés folyamatban...";
+        formMessage.style.color = "#CBD5E1";
+
+        const formData = new FormData(form);
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if(result.success){
+            formMessage.textContent = "Köszönöm! Az üzeneted sikeresen elküldve.";
+            formMessage.style.color = "#22C55E";
+            form.reset();
+        }else{
+            formMessage.textContent = "Hiba történt. Próbáld újra később.";
+            formMessage.style.color = "#EF4444";
+        }
     });
 }
