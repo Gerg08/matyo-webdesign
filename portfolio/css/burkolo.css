@@ -1,0 +1,280 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#F8FAFC;
+    color:#1F2937;
+}
+
+.hero{
+    min-height:100vh;
+    background:
+        linear-gradient(rgba(17,24,39,.72),rgba(17,24,39,.82)),
+        url("../images/burkolo-hero.jpg");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    padding:30px;
+}
+
+nav{
+    max-width:1150px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav h2{
+    font-size:34px;
+    color:#FB923C;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero-content{
+    max-width:850px;
+    min-height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin:auto;
+}
+
+.hero-content span{
+    color:#FDBA74;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:64px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:22px;
+    color:#E5E7EB;
+    max-width:650px;
+}
+
+.buttons{
+    display:flex;
+    gap:18px;
+    margin-top:35px;
+}
+
+.btn-primary,
+.btn-secondary{
+    padding:15px 30px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#F97316;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#EA580C;
+}
+
+.btn-secondary{
+    border:2px solid #FB923C;
+    color:white;
+}
+
+.btn-secondary:hover{
+    background:#FB923C;
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:45px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:22px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    box-shadow:0 20px 50px rgba(15,23,42,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.about{
+    background:white;
+    border-radius:22px;
+    padding:45px;
+    box-shadow:0 20px 50px rgba(15,23,42,.08);
+    text-align:center;
+    max-width:850px;
+}
+
+.about p{
+    color:#4B5563;
+    font-size:19px;
+    line-height:1.8;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.why-grid div{
+    background:white;
+    padding:30px;
+    border-radius:22px;
+    text-align:center;
+    font-weight:bold;
+    box-shadow:0 20px 50px rgba(15,23,42,.08);
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.review-card{
+    background:white;
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 20px 50px rgba(15,23,42,.08);
+}
+
+.review-card p{
+    color:#4B5563;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.review-card h4{
+    color:#F97316;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
+
+.contact-info,
+form{
+    background:white;
+    border-radius:22px;
+    padding:40px;
+    box-shadow:0 20px 50px rgba(15,23,42,.08);
+}
+
+.contact-info p{
+    margin-bottom:20px;
+    font-size:20px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+input,
+textarea{
+    padding:16px;
+    border:1px solid #D1D5DB;
+    border-radius:12px;
+    font-size:16px;
+}
+
+textarea{
+    min-height:140px;
+}
+
+button{
+    background:#F97316;
+    color:white;
+    border:none;
+    padding:16px;
+    border-radius:12px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#EA580C;
+}
+
+footer{
+    text-align:center;
+    padding:35px;
+    background:#111827;
+    color:white;
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero-content{
+        text-align:center;
+        align-items:center;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .grid,
+    .why-grid,
+    .review-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about{
+        padding:30px;
+    }
+}
