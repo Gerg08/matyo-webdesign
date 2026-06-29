@@ -1385,3 +1385,8 @@ html{
         linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.45)),
         url("../portfolio/images/kertesz-hero.jpg") center/cover no-repeat !important;
 }
+.villany-preview{
+    background-image:
+        linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.45)),
+        url("../portfolio/images/villany-hero.jpg");
+}

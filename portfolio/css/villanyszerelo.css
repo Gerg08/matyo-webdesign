@@ -6,15 +6,15 @@
 
 body{
     font-family:Arial, sans-serif;
-    color:#0F172A;
     background:#F8FAFC;
+    color:#0F172A;
 }
 
 .hero{
     min-height:100vh;
     background:
-        linear-gradient(rgba(15,23,42,.55),rgba(15,23,42,.65)),
-        url("../images/kertesz-hero.jpg");
+        linear-gradient(rgba(15,23,42,.65),rgba(15,23,42,.75)),
+        url("../images/villany-hero.jpg");
     background-size:cover;
     background-position:center;
     color:white;
@@ -31,7 +31,7 @@ nav{
 
 nav h2{
     font-size:32px;
-    color:#22C55E;
+    color:#60A5FA;
 }
 
 nav a{
@@ -50,14 +50,14 @@ nav a{
 }
 
 .hero-content span{
-    color:#86EFAC;
+    color:#93C5FD;
     font-weight:bold;
     letter-spacing:3px;
     margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:64px;
+    font-size:62px;
     line-height:1.1;
     margin-bottom:25px;
 }
@@ -83,12 +83,12 @@ nav a{
 }
 
 .btn-primary{
-    background:#22C55E;
-    color:#052E16;
+    background:#2563EB;
+    color:white;
 }
 
 .btn-secondary{
-    border:2px solid #22C55E;
+    border:2px solid #60A5FA;
     color:white;
 }
 
@@ -106,31 +106,69 @@ h2{
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:25px;
 }
 
-.card{
+.card,
+.review-card,
+.contact-info,
+form,
+.about,
+.why-grid div{
     background:white;
-    padding:35px;
     border-radius:22px;
+    box-shadow:0 20px 50px rgba(15,23,42,.08);
+}
+
+.card{
+    padding:35px;
     text-align:center;
     font-weight:bold;
-    box-shadow:0 20px 50px rgba(15,23,42,.08);
+    font-size:18px;
 }
 
-.why-box{
-    background:white;
-    border-radius:24px;
-    padding:40px;
-    max-width:700px;
-    margin:auto;
-    box-shadow:0 20px 50px rgba(15,23,42,.08);
+.about{
+    text-align:center;
+    max-width:850px;
 }
 
-.why-box p{
-    font-size:20px;
-    margin:18px 0;
+.about p{
+    color:#475569;
+    font-size:19px;
+    line-height:1.8;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.why-grid div{
+    padding:28px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.review-card{
+    padding:30px;
+}
+
+.review-card p{
+    color:#475569;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.review-card h4{
+    color:#2563EB;
 }
 
 .contact-grid{
@@ -141,10 +179,7 @@ h2{
 
 .contact-info,
 form{
-    background:white;
-    border-radius:24px;
     padding:40px;
-    box-shadow:0 20px 50px rgba(15,23,42,.08);
 }
 
 .contact-info p{
@@ -171,7 +206,7 @@ textarea{
 }
 
 button{
-    background:#16A34A;
+    background:#2563EB;
     color:white;
     border:none;
     padding:16px;
@@ -184,7 +219,7 @@ button{
 footer{
     text-align:center;
     padding:35px;
-    background:#052E16;
+    background:#0F172A;
     color:white;
 }
 
@@ -208,6 +243,8 @@ footer{
     }
 
     .grid,
+    .why-grid,
+    .review-grid,
     .contact-grid{
         grid-template-columns:1fr;
     }
